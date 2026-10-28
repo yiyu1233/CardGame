@@ -1,0 +1,14 @@
+{
+  "id": "example",
+  "name": "示例扩展包（机制 + 卡牌 + 语音 + 特效）",
+  "version": "1.0",
+  "enabled": true,
+  "cards": ["cards.json"],
+  "mechanics": ["mechanics.gd"],
+  "vfx": [
+    { "id": "starlight", "name": "星辰", "color": "#7dd3fc" },
+    { "id": "ember", "name": "余烬", "color": "#ff8a65" }
+  ],
+  "card_voice_dirs": ["card_voice"],
+  "card_art_dir": "card_art"
+}

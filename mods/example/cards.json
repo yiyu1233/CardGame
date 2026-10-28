@@ -1,0 +1,73 @@
+[
+  {
+    "id": "mod_pursuer",
+    "name": "追猎者",
+    "cost": 4,
+    "type": 0,
+    "rarity": 2,
+    "attack": 3,
+    "health": 4,
+    "keywords": ["pursuit"],
+    "troop_id": "",
+    "pack": "basic",
+    "desc": "示例扩展包卡牌：自带扩展包登记的「追击」机制。",
+    "vfx": "starlight"
+  },
+  {
+    "id": "mod_grave_warden",
+    "name": "守墓人",
+    "cost": 3,
+    "type": 0,
+    "rarity": 1,
+    "attack": 2,
+    "health": 3,
+    "keywords": ["soul_drain", "taunt"],
+    "troop_id": "",
+    "pack": "basic",
+    "desc": "示例扩展包卡牌：自带扩展包登记的「噬魂」机制。",
+    "vfx": "ember"
+  },
+  {
+    "id": "mod_ritual",
+    "name": "祭仪",
+    "cost": 2,
+    "type": 1,
+    "rarity": 1,
+    "attack": 0,
+    "health": 0,
+    "effects": [ { "id": "mod_draw_heal", "value": 2, "target": 0 } ],
+    "troop_id": "",
+    "pack": "basic",
+    "desc": "示例扩展包卡牌：用扩展包登记的 {效果} 组成的效果链。",
+    "vfx": "starlight"
+  },
+  {
+    "id": "mod_awakened_guard",
+    "name": "觉醒的卫兵",
+    "cost": 3,
+    "type": 0,
+    "rarity": 2,
+    "attack": 2,
+    "health": 3,
+    "keywords": ["awaken", "taunt"],
+    "troop_id": "",
+    "pack": "basic",
+    "desc": "影之诗「觉醒」示例：我方主战者生命 ≤ 10 时 +1/+1。",
+    "vfx": "starlight"
+  },
+  {
+    "id": "mod_striker",
+    "name": "突击兵",
+    "cost": 5,
+    "type": 0,
+    "rarity": 2,
+    "attack": 4,
+    "health": 4,
+    "keywords": ["charge"],
+    "triggers": [ { "on": "attack", "effects": [ { "id": "mod_draw_heal", "value": 1, "target": 0 } ] } ],
+    "troop_id": "",
+    "pack": "basic",
+    "desc": "影之诗「攻击时」示例：攻击时抽 1 张并回 1 点生命。",
+    "vfx": "ember"
+  }
+]

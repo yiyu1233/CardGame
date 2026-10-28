@@ -1,0 +1,140 @@
+[
+  {
+    "id": "aggro_flame",
+    "name": "烈焰快攻",
+    "color": "#ff7043",
+    "desc": "低费随从铺场抢血，冲锋与直伤法术收尾。开局就要压着对手打。",
+    "cards": [
+      { "id": "c009", "count": 2 },
+      { "id": "c001", "count": 2 },
+      { "id": "c005", "count": 2 },
+      { "id": "c014", "count": 2 },
+      { "id": "c021", "count": 2 },
+      { "id": "c003", "count": 2 },
+      { "id": "c006", "count": 2 },
+      { "id": "c013", "count": 2 },
+      { "id": "c008", "count": 2 },
+      { "id": "s010", "count": 2 },
+      { "id": "s025", "count": 2 },
+      { "id": "s001", "count": 2 },
+      { "id": "s011", "count": 2 },
+      { "id": "s005", "count": 2 },
+      { "id": "s020", "count": 2 }
+    ]
+  },
+  {
+    "id": "holy_control",
+    "name": "圣光控场",
+    "color": "#ffd54f",
+    "desc": "嘲讽与圣盾筑墙，治疗把节奏拖长，再用巨兽和清场终结比赛。",
+    "cards": [
+      { "id": "c012", "count": 2 },
+      { "id": "c007", "count": 2 },
+      { "id": "c002", "count": 2 },
+      { "id": "c004", "count": 2 },
+      { "id": "c019", "count": 2 },
+      { "id": "c015", "count": 2 },
+      { "id": "c026", "count": 2 },
+      { "id": "c011", "count": 2 },
+      { "id": "s002", "count": 2 },
+      { "id": "s004", "count": 2 },
+      { "id": "s026", "count": 2 },
+      { "id": "s014", "count": 2 },
+      { "id": "s008", "count": 2 },
+      { "id": "s007", "count": 2 },
+      { "id": "s009", "count": 2 }
+    ]
+  },
+  {
+    "id": "undead_swarm",
+    "name": "亡灵仆从",
+    "color": "#81c784",
+    "desc": "召唤与复活滚雪球，群体增益把一地杂兵变成大军。缺点是怕群伤。",
+    "cards": [
+      { "id": "c009", "count": 2 },
+      { "id": "c001", "count": 2 },
+      { "id": "c025", "count": 2 },
+      { "id": "c021", "count": 2 },
+      { "id": "c013", "count": 2 },
+      { "id": "c016", "count": 2 },
+      { "id": "c012", "count": 2 },
+      { "id": "c004", "count": 2 },
+      { "id": "s012", "count": 2 },
+      { "id": "s022", "count": 2 },
+      { "id": "s003", "count": 2 },
+      { "id": "s006", "count": 2 },
+      { "id": "s011", "count": 2 },
+      { "id": "s015", "count": 2 },
+      { "id": "s023", "count": 2 }
+    ]
+  },
+  {
+    "id": "spell_storm",
+    "name": "法术风暴",
+    "color": "#64b5f6",
+    "desc": "少量随从负责站场拖延，靠过牌攒资源，群伤清场后再用直伤打脸。",
+    "cards": [
+      { "id": "c001", "count": 2 },
+      { "id": "c005", "count": 2 },
+      { "id": "c017", "count": 2 },
+      { "id": "c018", "count": 2 },
+      { "id": "c020", "count": 2 },
+      { "id": "c007", "count": 2 },
+      { "id": "c012", "count": 2 },
+      { "id": "s010", "count": 2 },
+      { "id": "s003", "count": 2 },
+      { "id": "s001", "count": 2 },
+      { "id": "s005", "count": 2 },
+      { "id": "s007", "count": 2 },
+      { "id": "s009", "count": 2 },
+      { "id": "s013", "count": 2 },
+      { "id": "s021", "count": 2 }
+    ]
+  },
+  {
+    "id": "frost_lock",
+    "name": "冰霜封锁",
+    "color": "#4dd0e1",
+    "desc": "冰冻、沉默与削减压住场面，暗影契约专解大怪，稳扎稳打耗死对手。",
+    "cards": [
+      { "id": "c018", "count": 2 },
+      { "id": "c017", "count": 2 },
+      { "id": "c002", "count": 2 },
+      { "id": "c022", "count": 2 },
+      { "id": "c026", "count": 2 },
+      { "id": "c011", "count": 2 },
+      { "id": "s013", "count": 2 },
+      { "id": "s014", "count": 2 },
+      { "id": "s024", "count": 2 },
+      { "id": "s016", "count": 2 },
+      { "id": "s019", "count": 2 },
+      { "id": "s017", "count": 2 },
+      { "id": "s009", "count": 2 },
+      { "id": "s021", "count": 2 },
+      { "id": "s005", "count": 2 }
+    ]
+  },
+  {
+    "id": "titan_ramp",
+    "name": "巨兽降临",
+    "color": "#ba68c8",
+    "desc": "先用激活与水晶跳过费用曲线，抢先落地巨兽，靠体型一路压死对手。",
+    "cards": [
+      { "id": "c002", "count": 2 },
+      { "id": "c026", "count": 2 },
+      { "id": "c006", "count": 2 },
+      { "id": "c015", "count": 2 },
+      { "id": "c019", "count": 2 },
+      { "id": "c010", "count": 2 },
+      { "id": "c016", "count": 2 },
+      { "id": "c011", "count": 2 },
+      { "id": "s010", "count": 2 },
+      { "id": "s022", "count": 2 },
+      { "id": "s003", "count": 2 },
+      { "id": "s027", "count": 2 },
+      { "id": "s028", "count": 2 },
+      { "id": "s004", "count": 2 },
+      { "id": "s002", "count": 2 }
+    ]
+  }
+]

@@ -1,0 +1,32 @@
+[
+	{
+		"id": "neutral",
+		"name": "中立",
+		"color": "#b0bec5",
+		"desc": "不属于任何兵种的卡默认归入这个兵种。"
+	},
+	{
+		"id": "soldier",
+		"name": "士兵",
+		"color": "#ef5350",
+		"desc": "受指挥官号令的基础战力。"
+	},
+	{
+		"id": "commander",
+		"name": "指挥官",
+		"color": "#ffb74d",
+		"desc": "统率士兵的将领。"
+	},
+	{
+		"id": "machina",
+		"name": "机械",
+		"color": "#4dd0e1",
+		"desc": "以零件与蒸汽驱动的造物。"
+	},
+	{
+		"id": "nature",
+		"name": "自然",
+		"color": "#81c784",
+		"desc": "与森林和野兽为伍。"
+	}
+]

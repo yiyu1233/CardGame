@@ -1,0 +1,42 @@
+[
+	{
+		"id": "chaos",
+		"name": "混沌召来",
+		"desc": "随机获得 1–2 个能力，同一个能力可能重复出现",
+		"mode": "repeat",
+		"count_min": 1,
+		"count_max": 2,
+		"abilities": [
+			{"id": "destroy_random", "value": 1, "target": -1},
+			{"id": "draw", "value": 2, "target": -1},
+			{"id": "armor", "value": 3, "target": -1}
+		]
+	},
+	{
+		"id": "chaos_unique",
+		"name": "混沌契约",
+		"desc": "随机获得 2–3 个不重复的能力",
+		"mode": "unique",
+		"count_min": 2,
+		"count_max": 3,
+		"abilities": [
+			{"id": "destroy_random", "value": 1, "target": -1},
+			{"id": "damage_hero", "value": 2, "target": -1},
+			{"id": "draw", "value": 1, "target": -1},
+			{"id": "grant_shield", "value": 1, "target": 1}
+		]
+	},
+	{
+		"id": "chaos_order",
+		"name": "万象轮转",
+		"desc": "池子里所有能力按随机次序依次触发",
+		"mode": "order",
+		"count_min": 0,
+		"count_max": 0,
+		"abilities": [
+			{"id": "aoe_enemy", "value": 2, "target": -1},
+			{"id": "armor", "value": 2, "target": -1},
+			{"id": "draw", "value": 1, "target": -1}
+		]
+	}
+]

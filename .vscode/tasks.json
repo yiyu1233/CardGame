@@ -1,0 +1,40 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "启动游戏",
+      "detail": "以图形窗口启动卡牌对战游戏（同 启动游戏.bat）",
+      "type": "shell",
+      "command": "${workspaceFolder}\\启动游戏.bat",
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "presentation": {
+        "reveal": "always",
+        "panel": "dedicated",
+        "clear": true
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "启动游戏（带控制台）",
+      "detail": "启动游戏并保留引擎日志，便于排查启动失败与脚本报错",
+      "type": "shell",
+      "command": "${workspaceFolder}\\启动游戏(带控制台).bat",
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "group": "build",
+      "presentation": {
+        "reveal": "always",
+        "panel": "dedicated",
+        "clear": true
+      },
+      "problemMatcher": []
+    }
+  ]
+}

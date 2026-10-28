@@ -1,0 +1,290 @@
+[gd_scene load_steps=6 format=3]
+
+[ext_resource type="Script" path="res://scripts/Main.gd" id="1_main"]
+[ext_resource type="Script" path="res://scripts/CardDetail.gd" id="2_detail"]
+[ext_resource type="Script" path="res://scripts/BoardSurface.gd" id="3_board"]
+[ext_resource type="Script" path="res://scripts/HeroFrame.gd" id="4_hero"]
+[ext_resource type="Script" path="res://scripts/StatusPanel.gd" id="5_status"]
+
+[node name="Main" type="MarginContainer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_bottom = 8
+script = ExtResource("1_main")
+
+[node name="DragLayer" type="CanvasLayer" parent="."]
+layer = 128
+
+[node name="CardDetail" type="PanelContainer" parent="DragLayer"]
+script = ExtResource("2_detail")
+
+[node name="Root" type="HBoxContainer" parent="."]
+layout_mode = 2
+theme_override_constants/separation = 12
+
+[node name="Arena" type="VBoxContainer" parent="Root"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 6
+
+[node name="TopBar" type="HBoxContainer" parent="Root/Arena"]
+layout_mode = 2
+theme_override_constants/separation = 12
+
+[node name="SideLabel" type="Label" parent="Root/Arena/TopBar"]
+layout_mode = 2
+text = "准备中"
+
+[node name="TopSpacer" type="Control" parent="Root/Arena/TopBar"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="SettingsButton" type="Button" parent="Root/Arena/TopBar"]
+layout_mode = 2
+text = "设置"
+
+[node name="RestartButton" type="Button" parent="Root/Arena/TopBar"]
+layout_mode = 2
+text = "重开一局"
+
+[node name="ConcedeButton" type="Button" parent="Root/Arena/TopBar"]
+layout_mode = 2
+text = "认输"
+
+[node name="AiButton" type="Button" parent="Root/Arena/TopBar"]
+layout_mode = 2
+text = "AI 助手"
+
+[node name="AdminButton" type="Button" parent="Root/Arena/TopBar"]
+layout_mode = 2
+text = "管理员登录"
+
+[node name="AdminStatus" type="Label" parent="Root/Arena/TopBar"]
+layout_mode = 2
+text = "未登录"
+
+[node name="ArenaPanel" type="PanelContainer" parent="Root/Arena"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="ArenaMargin" type="MarginContainer" parent="Root/Arena/ArenaPanel"]
+layout_mode = 2
+theme_override_constants/margin_left = 14
+theme_override_constants/margin_right = 14
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="ArenaVBox" type="VBoxContainer" parent="Root/Arena/ArenaPanel/ArenaMargin"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 2
+
+[node name="EnemyHalf" type="VBoxContainer" parent="Root/Arena/ArenaPanel/ArenaMargin/ArenaVBox"]
+layout_mode = 2
+size_flags_vertical = 3
+alignment = 2
+theme_override_constants/separation = 4
+
+[node name="EnemyHandRow" type="Control" parent="Root/Arena/ArenaPanel/ArenaMargin/ArenaVBox/EnemyHalf"]
+layout_mode = 2
+custom_minimum_size = Vector2(0, 90)
+
+[node name="EnemyHeroBox" type="Control" parent="Root/Arena/ArenaPanel/ArenaMargin/ArenaVBox/EnemyHalf"]
+layout_mode = 2
+custom_minimum_size = Vector2(0, 52)
+
+[node name="EnemyHeroFrame" type="Control" parent="Root/Arena/ArenaPanel/ArenaMargin/ArenaVBox/EnemyHalf/EnemyHeroBox"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -210.0
+offset_top = -26.0
+offset_right = 210.0
+offset_bottom = 26.0
+grow_horizontal = 2
+grow_vertical = 2
+custom_minimum_size = Vector2(420, 52)
+script = ExtResource("4_hero")
+
+[node name="EnemyStatusPanel" type="Control" parent="Root/Arena/ArenaPanel/ArenaMargin/ArenaVBox/EnemyHalf/EnemyHeroBox"]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -120.0
+offset_top = -26.0
+offset_right = -8.0
+offset_bottom = 26.0
+grow_horizontal = 0
+grow_vertical = 2
+custom_minimum_size = Vector2(112, 52)
+script = ExtResource("5_status")
+
+[node name="EnemyCitySlot" type="Control" parent="Root/Arena/ArenaPanel/ArenaMargin/ArenaVBox/EnemyHalf/EnemyHeroBox"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -346.0
+offset_top = -25.0
+offset_right = -220.0
+offset_bottom = 25.0
+grow_horizontal = 2
+grow_vertical = 2
+custom_minimum_size = Vector2(126, 50)
+
+[node name="EnemyBoardRow" type="HBoxContainer" parent="Root/Arena/ArenaPanel/ArenaMargin/ArenaVBox/EnemyHalf"]
+layout_mode = 2
+custom_minimum_size = Vector2(0, 140)
+alignment = 1
+theme_override_constants/separation = 10
+script = ExtResource("3_board")
+caption = "敌方战场"
+slot_used = 0
+
+[node name="MidLine" type="Control" parent="Root/Arena/ArenaPanel/ArenaMargin/ArenaVBox"]
+custom_minimum_size = Vector2(0, 24)
+layout_mode = 2
+
+[node name="SeamLine" type="Panel" parent="Root/Arena/ArenaPanel/ArenaMargin/ArenaVBox/MidLine"]
+layout_mode = 1
+anchor_right = 1.0
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_top = -1.0
+offset_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MidLabel" type="Label" parent="Root/Arena/ArenaPanel/ArenaMargin/ArenaVBox/MidLine"]
+layout_mode = 1
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.62, 0.67, 0.74, 1)
+text = "中 线"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="PlayerHalf" type="VBoxContainer" parent="Root/Arena/ArenaPanel/ArenaMargin/ArenaVBox"]
+layout_mode = 2
+size_flags_vertical = 3
+alignment = 0
+theme_override_constants/separation = 4
+
+[node name="PlayerBoardRow" type="HBoxContainer" parent="Root/Arena/ArenaPanel/ArenaMargin/ArenaVBox/PlayerHalf"]
+layout_mode = 2
+custom_minimum_size = Vector2(0, 140)
+alignment = 1
+theme_override_constants/separation = 10
+script = ExtResource("3_board")
+caption = "我方战场"
+slot_used = 0
+
+[node name="PlayerHeroBox" type="Control" parent="Root/Arena/ArenaPanel/ArenaMargin/ArenaVBox/PlayerHalf"]
+layout_mode = 2
+custom_minimum_size = Vector2(0, 52)
+
+[node name="PlayerHeroFrame" type="Control" parent="Root/Arena/ArenaPanel/ArenaMargin/ArenaVBox/PlayerHalf/PlayerHeroBox"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -210.0
+offset_top = -26.0
+offset_right = 210.0
+offset_bottom = 26.0
+grow_horizontal = 2
+grow_vertical = 2
+custom_minimum_size = Vector2(420, 52)
+script = ExtResource("4_hero")
+
+[node name="PlayerStatusPanel" type="Control" parent="Root/Arena/ArenaPanel/ArenaMargin/ArenaVBox/PlayerHalf/PlayerHeroBox"]
+layout_mode = 1
+anchors_preset = 4
+anchor_left = 0.0
+anchor_top = 0.5
+anchor_right = 0.0
+anchor_bottom = 0.5
+offset_left = 8.0
+offset_top = -26.0
+offset_right = 120.0
+offset_bottom = 26.0
+grow_horizontal = 1
+grow_vertical = 2
+custom_minimum_size = Vector2(112, 52)
+script = ExtResource("5_status")
+
+[node name="PlayerCitySlot" type="Control" parent="Root/Arena/ArenaPanel/ArenaMargin/ArenaVBox/PlayerHalf/PlayerHeroBox"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -346.0
+offset_top = -25.0
+offset_right = -220.0
+offset_bottom = 25.0
+grow_horizontal = 2
+grow_vertical = 2
+custom_minimum_size = Vector2(126, 50)
+
+[node name="HandArea" type="Control" parent="Root/Arena/ArenaPanel/ArenaMargin/ArenaVBox/PlayerHalf"]
+layout_mode = 2
+custom_minimum_size = Vector2(0, 196)
+
+[node name="ActionBar" type="HBoxContainer" parent="Root/Arena"]
+layout_mode = 2
+alignment = 1
+theme_override_constants/separation = 14
+
+[node name="HintLabel" type="Label" parent="Root/Arena/ActionBar"]
+layout_mode = 2
+size_flags_horizontal = 3
+horizontal_alignment = 1
+autowrap_mode = 3
+text = "操作提示"
+
+[node name="LogPanel" type="PanelContainer" parent="Root"]
+layout_mode = 2
+custom_minimum_size = Vector2(300, 0)
+
+[node name="LogMargin" type="MarginContainer" parent="Root/LogPanel"]
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="LogVBox" type="VBoxContainer" parent="Root/LogPanel/LogMargin"]
+layout_mode = 2
+theme_override_constants/separation = 6
+
+[node name="LogTitle" type="Label" parent="Root/LogPanel/LogMargin/LogVBox"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.75, 0.78, 0.85, 1)
+text = "战 斗 日 志"
+
+[node name="LogLabel" type="RichTextLabel" parent="Root/LogPanel/LogMargin/LogVBox"]
+layout_mode = 2
+size_flags_vertical = 3
+bbcode_enabled = true
+scroll_following = true
+text = ""
